@@ -1,9 +1,9 @@
-import os, datetime
-print(os.environ['USERPROFILE'])
-user = (os.getenv('username'))
-current_time = datetime.datetime.now()
-format_time = current_time.strftime("%d/%m/%Y %H:%M:%S")
-print(format_time)
+class Character:
+    def __init__(self, name, address, phoneNum):
+        self.__name = name
+        self.__age = address
+        self.__race = phoneNum
+
 
 class Person:
 
@@ -52,19 +52,3 @@ class Customer(Person):
        if self.__mailing == "No":
            return False
 
-def main():
-    name = input("Enter the name: ")
-    #address = input("Enter the address: ")
-    #phoneNum = input("Enter the phone number: ")
-    #custNum = input("Enter the customer number: ")
-    #mail = input("Does the customer wish to be on the mailing list?(Yes/No) ")
-    #people = Customer(name, address, phoneNum, custNum, mail)
-    #print("Customer information:")
-    #print("Name: ", people.getName())
-    #print("Address: ", people.getAddress())
-    #print("Phone Number: ", people.getTelephone())
-    #print("Customer Number: ", people.getCustomerNum())
-    #print("On Mailing List: ", people.getMailing())
-
-    
-main()
