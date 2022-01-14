@@ -52,8 +52,44 @@ class Customer(Person):
        if self.__mailing == "No":
            return False
 
+
+class Character:
+    def __init__(self, name, age, race, alignment):
+        self.__name = name
+        self.__age = age
+        self.__race = race
+        self.__align = alignment
+
+    def setName(self, name):
+        self.__name = name
+
+    def setAge(self, age):
+       self.__age = age
+
+    def setRace(self, race):
+       self.__race = race
+
+    def setAlign(self, alignment):
+       self.__align = alignment
+
+    def getName(self):
+       return self.__name
+
+    def getAge(self):
+       return self.__age
+
+    def getRace(self):
+       return self.__race
+
+    def getAlign(self):
+       return self.__align
+
 def main():
     name = input("Enter the name: ")
+    alignments = ["Lawful Good", "Neutral Good", "Chaotic Good",
+                  "Lawful Neutral", "True Neutral", "Chaotic Neutral",
+                  "Lawful Evil", "Neutral Evil", "Chaotic Evil"]
+    races = ["Dragonborn", "Gnome", "Dwarf", "Half-Elf", "Elf", "Halfling", "Half-Orc", "Human", "Tiefling"]
     #address = input("Enter the address: ")
     #phoneNum = input("Enter the phone number: ")
     #custNum = input("Enter the customer number: ")
