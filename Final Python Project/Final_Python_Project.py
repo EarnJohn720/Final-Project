@@ -1,4 +1,4 @@
-import os, datetime
+import os, datetime, random
 print(os.environ['USERPROFILE'])
 user = (os.getenv('username'))
 current_time = datetime.datetime.now()
@@ -54,11 +54,12 @@ class Customer(Person):
 
 
 class Character:
-    def __init__(self, name, age, race, alignment):
+    def __init__(self, name, age, race, alignment, stats):
         self.__name = name
         self.__age = age
         self.__race = race
         self.__align = alignment
+        self.__stats = stats
 
     def setName(self, name):
         self.__name = name
@@ -72,6 +73,9 @@ class Character:
     def setAlign(self, alignment):
        self.__align = alignment
 
+    def setStats(self, Stats):
+       self.__stats = Stats
+
     def getName(self):
        return self.__name
 
@@ -84,12 +88,24 @@ class Character:
     def getAlign(self):
        return self.__align
 
+    def getStats(self):
+       return self.__stats
+
 def main():
-    name = input("Enter the name: ")
+    #name = input("Enter the name: ")
+
     alignments = ["Lawful Good", "Neutral Good", "Chaotic Good",
                   "Lawful Neutral", "True Neutral", "Chaotic Neutral",
                   "Lawful Evil", "Neutral Evil", "Chaotic Evil"]
     races = ["Dragonborn", "Gnome", "Dwarf", "Half-Elf", "Elf", "Halfling", "Half-Orc", "Human", "Tiefling"]
+    stats = {"Strength" : 0, "Dexterity" : 0, "Constitution" : 0, "Intelligence" : 0, "Wisdom" : 0, "Charisma" : 0}
+    test = len(stats)
+    for x in stats.keys():
+        stats[x] = random.randint(1, 10)
+
+    for x, y in stats.items():
+        print(x, y)
+
     #address = input("Enter the address: ")
     #phoneNum = input("Enter the phone number: ")
     #custNum = input("Enter the customer number: ")
