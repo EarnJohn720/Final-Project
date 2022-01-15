@@ -1,11 +1,12 @@
 class Character:
+    #Initializer
     def __init__(self, name, age, race, alignment, stats):
         self.__name = name
         self.__age = age
         self.__race = race
         self.__align = alignment
         self.__stats = stats
-
+    #Setter
     def setName(self, name):
         self.__name = name
 
@@ -21,6 +22,7 @@ class Character:
     def setStats(self, Stats):
        self.__stats = Stats
 
+    #Getter
     def getName(self):
        return self.__name
 
