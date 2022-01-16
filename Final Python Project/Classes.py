@@ -38,6 +38,9 @@ class Character:
     def getStats(self):
         for x, y in self.__stats.items():
             print(f"{x}: {y}")
+
+    def returnStats(self):
+        return self.__stats
         #print()
        #return self.__stats
 

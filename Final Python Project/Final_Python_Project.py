@@ -94,8 +94,17 @@ def main():
             else:
                 continue
 
-
+    file_open = open("DnD Campaign Characters.txt", "w")
     for x in range(len(party)):
+        temp_dict = ""
+        file_open.write(f"Name: {party[x].getName()}\n")
+        file_open.write(f"Age: {party[x].getAge()}\n")
+        file_open.write(f"Race: {party[x].getRace()}\n")
+        file_open.write(f"Alignment: {party[x].getAlign()}\n")
+        temp_dict = party[x].returnStats()
+        for z, y in temp_dict.items():
+            file_open.write(f"{z}: {y}\n")
+        file_open.write("\n")
         print(f"Name: {party[x].getName()}")
         print(f"Age: {party[x].getAge()}")
         print(f"Race: {party[x].getRace()}")
@@ -103,5 +112,5 @@ def main():
         party[x].getStats()
         print()
 
-
+    file_open.close()
 main()
