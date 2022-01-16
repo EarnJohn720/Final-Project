@@ -102,13 +102,6 @@ def main():
         print(f"Alignment: {party[x].getAlign()}")
         party[x].getStats()
         print()
-    #test = len(stats)
-    #for x in stats.keys():
-    #    stats[x] = random.randint(1, 10)
-
-    
-
-    
 
 
 main()
