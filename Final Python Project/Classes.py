@@ -36,7 +36,14 @@ class Character:
        return self.__align
 
     def getStats(self):
-       return self.__stats
+        for x, y in self.__stats.items():
+            print(f"{x}: {y}")
+        #print()
+       #return self.__stats
+
+    #def __str__(self):
+
+    #   return 0
 
 #class Person:
 
