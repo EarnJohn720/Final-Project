@@ -7,6 +7,16 @@ print(format_time)
 
 
 def main():
+    your_race_des = ""
+    race_descripts = ["Dragonborn look very much like dragons standing errect in humaniod form, though they lack wings or a tail",
+                     "A gnome's energy and ethusiasm for living shines through every inch of his or her tiny body.",
+                     "Bold and hardy, dwarves are known as skilled warriors, miners, and workers of stone and metal.",
+                     "Half-elves cobine what some say are the best qualities of their elf and human parents.",
+                     "Elves are a magical people of otherworldly grace, living in the world but not entirely part of it.",
+                     "The diminutive halflings survive in a world full of larger creatures by avoiding notice or barring that, avoiding offense.",
+                     "Halforcs' grayish pigmentation sloping forehead, jutting jaws, prominent teeth, and towering builds make their orcish heritage plan for all to see.",
+                     "Humans are the most adaptable and ambitious people among the common races. Whatever drives them, humans are the innovators, the achievers, and the pioneers of worlds.",
+                     "To be greeted with stares and whispers, to suffer violence and insult on the street, to see mistrust and fear in every eye: this is the lot of the tiefling."]
     choice = ""
     party = []
 
@@ -37,22 +47,31 @@ def main():
                 match race:
                         case 1:
                             race = races[race - 1]
+                            your_race_des = race_descripts[race - 1]
                         case 2:
                             race = races[race - 1]
+                            your_race_des = race_descripts[race - 1]
                         case 3:
                             race = races[race - 1]
+                            your_race_des = race_descripts[race - 1]
                         case 4:
                             race = races[race - 1]
+                            your_race_des = race_descripts[race - 1]
                         case 5:
                             race = races[race - 1]
+                            your_race_des = race_descripts[race - 1]
                         case 6:
                             race = races[race - 1]
+                            your_race_des = race_descripts[race - 1]
                         case 7:
                             race = races[race - 1]
+                            your_race_des = race_descripts[race - 1]
                         case 8:
                             race = races[race - 1]
+                            your_race_des = race_descripts[race - 1]
                         case 9:
                             race = races[race - 1]
+                            your_race_des = race_descripts[race - 1]
                 print("There are 6 alignments:\n1. Lawful Good, 2. Neutral Good, 3. Chaotic Good,")
                 print("4. Lawful Neutral, 5. True Neutral, 6. Chaotic Neutral,")
                 print("7. Lawful Evil, 8. Neutral Evil, 9. Chaotic Evil")
