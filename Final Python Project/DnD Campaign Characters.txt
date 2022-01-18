@@ -1,33 +1,24 @@
-Name: Mon
-Age: 12
-Race: Dwarf
+Name: Po
+Age: 18
+Race: Half-Elf
+Race Description: Half-elves cobine what some say are the best qualities of their elf and human parents.
+Alignment: Chaotic Good
+Strength: 10
+Dexterity: 4
+Constitution: 7
+Intelligence: 5
+Wisdom: 10
+Charisma: 10
+
+Name: Re
+Age: 19
+Race: Halfling
+Race Description: The diminutive halflings survive in a world full of larger creatures by avoiding notice or barring that, avoiding offense.
 Alignment: Neutral Good
-Strength: 1
-Dexterity: 1
-Constitution: 4
-Intelligence: 10
-Wisdom: 5
-Charisma: 8
-
-Name: Hug
-Age: 16
-Race: Half-Orc
-Alignment: Chaotic Neutral
-Strength: 1
-Dexterity: 1
-Constitution: 4
-Intelligence: 10
-Wisdom: 5
-Charisma: 8
-
-Name: Nin
-Age: 15
-Race: Human
-Alignment: Lawful Neutral
-Strength: 1
-Dexterity: 1
-Constitution: 4
-Intelligence: 10
-Wisdom: 5
-Charisma: 8
+Strength: 10
+Dexterity: 4
+Constitution: 7
+Intelligence: 5
+Wisdom: 10
+Charisma: 10
 

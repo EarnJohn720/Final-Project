@@ -38,40 +38,51 @@ def main():
         while True:
             try:
                 age = int(input("Enter your character age: "))
-                race = ""
+                race = 0
                 
                 print("There are 9 races:\n1. Dragonborn, 2. Gnome, 3. Dwarf,")
                 print("4. Half-Elf, 5. Elf, 6. Halfling,")
                 print("7. Half-Orc, 8. Human, 9. Tiefling")
                 race = int(input("Choose your character race: "))
+                your_race_des = race_descripts[race - 1]
                 match race:
                         case 1:
                             race = races[race - 1]
-                            your_race_des = race_descripts[race - 1]
+                            #your_race_des = race_descripts[race - 1]
+                            #print(your_race_des)
                         case 2:
                             race = races[race - 1]
-                            your_race_des = race_descripts[race - 1]
+                            #your_race_des = race_descripts[race - 1]
+                            #print(your_race_des)
                         case 3:
                             race = races[race - 1]
-                            your_race_des = race_descripts[race - 1]
+                            #your_race_des = race_descripts[race - 1]
+                            #print(your_race_des)
                         case 4:
                             race = races[race - 1]
-                            your_race_des = race_descripts[race - 1]
+                            #your_race_des = race_descripts[race - 1]
+                            #print(your_race_des)
                         case 5:
                             race = races[race - 1]
-                            your_race_des = race_descripts[race - 1]
+                            #your_race_des = race_descripts[race - 1]
+                            #print(your_race_des)
                         case 6:
                             race = races[race - 1]
-                            your_race_des = race_descripts[race - 1]
+                            #your_race_des = race_descripts[race - 1]
+                            #print(your_race_des)
                         case 7:
                             race = races[race - 1]
-                            your_race_des = race_descripts[race - 1]
+                            #your_race_des = race_descripts[race - 1]
+                            #print(your_race_des)
                         case 8:
                             race = races[race - 1]
-                            your_race_des = race_descripts[race - 1]
+                            #your_race_des = race_descripts[race - 1]
+                            #print(your_race_des)
                         case 9:
                             race = races[race - 1]
-                            your_race_des = race_descripts[race - 1]
+                            #your_race_des = race_descripts[race - 1]
+                            #print(your_race_des)
+                print(your_race_des)
                 print("There are 6 alignments:\n1. Lawful Good, 2. Neutral Good, 3. Chaotic Good,")
                 print("4. Lawful Neutral, 5. True Neutral, 6. Chaotic Neutral,")
                 print("7. Lawful Evil, 8. Neutral Evil, 9. Chaotic Evil")
@@ -107,7 +118,8 @@ def main():
                 print(f"{x}: {y}")
             stat_change = input("Are you okay with these stats?(Enter Y for yes/Any other key to randomize): ")
             if stat_change.upper() == "Y":
-                party.append(Classes.Character(name, age, race, choice, stats))
+                party.append(Classes.Character(name, age, race, your_race_des, choice, stats))
+                #party.append(Classes.Character(name, age, race, choice, stats))
                 print()
                 break
             else:
@@ -119,6 +131,7 @@ def main():
         file_open.write(f"Name: {party[x].getName()}\n")
         file_open.write(f"Age: {party[x].getAge()}\n")
         file_open.write(f"Race: {party[x].getRace()}\n")
+        file_open.write(f"Race Description: {party[x].getDescript()}\n")
         file_open.write(f"Alignment: {party[x].getAlign()}\n")
         temp_dict = party[x].returnStats()
         for z, y in temp_dict.items():
@@ -127,6 +140,7 @@ def main():
         print(f"Name: {party[x].getName()}")
         print(f"Age: {party[x].getAge()}")
         print(f"Race: {party[x].getRace()}")
+        print(f"Race Description: {party[x].getDescript()}")
         print(f"Alignment: {party[x].getAlign()}")
         party[x].getStats()
         print()

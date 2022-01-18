@@ -6,6 +6,14 @@ class Character:
         self.__race = race
         self.__align = alignment
         self.__stats = stats
+
+    def __init__(self, name, age, race, race_des, alignment, stats):
+        self.__name = name
+        self.__age = age
+        self.__race = race
+        self.__des = race_des
+        self.__align = alignment
+        self.__stats = stats
     #Setter
     def setName(self, name):
         self.__name = name
@@ -21,6 +29,9 @@ class Character:
 
     def setStats(self, Stats):
        self.__stats = Stats
+
+    def setDescipt(self, description):
+        self.__des = description
 
     #Getter
     def getName(self):
@@ -38,6 +49,9 @@ class Character:
     def getStats(self):
         for x, y in self.__stats.items():
             print(f"{x}: {y}")
+
+    def getDescript(self):
+        return self.__des
 
     def returnStats(self):
         return self.__stats
